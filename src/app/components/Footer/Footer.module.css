@@ -1,69 +1,115 @@
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 60px 20px 20px;
-  padding-left: 15vw;
-  padding-right: 15vw;
+  padding: 80px 84px 10px 128px;
 }
 
-.top,
-.bottom {
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 60% 40%;
   gap: 40px;
-  margin-bottom: 40px;
+  /* margin-bottom: 20px; */
 }
 
 .newsletter h3,
 .contact h3,
-.column h4 {
-  font-size: 1rem;
+.bottomLeft h4,
+.bottomRight h4 {
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 .newsletter p,
-.contact p,
-.currencyNote {
-  font-size: 0.9rem;
+.contact p {
+  font-size: 1rem;
+  font-weight: 400;
   margin-bottom: 10px;
-  color: #ccc;
+  color: #FFF;
 }
 
-.newsletter .inputGroup {
+.currencyNote {
+  font-size: 12px !important;
+  font-weight: 400;
+}
+
+.newsletter h3 {
+    margin-bottom: 2rem;
+}
+
+.newsletter p {
+    margin-bottom: 3.125rem;
+}
+
+.inputGroup {
   display: flex;
   gap: 10px;
   margin-top: 12px;
 }
 
 .inputGroup input {
+    font-family: 'Satoshi';
+  font-size: 1.125rem !important;
   flex: 1;
-  padding: 10px 12px;
+  max-width: 22rem;
+  padding: 13px 24px;
   border: none;
   font-size: 0.9rem;
 }
 
+.inputGroup input:focus {
+    outline: none;
+}
+
 .inputGroup button {
-  padding: 10px 20px;
+  padding: 13px 48px;
   background-color: transparent;
   border: 1px solid #fff;
+  border-radius: 5px;
   color: #fff;
-  font-size: 0.85rem;
+  font-size: 1.125rem;
   cursor: pointer;
+  opacity: 30%;
 }
 
 .currency {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   font-size: 0.9rem;
   margin: 8px 0;
 }
 
+.currencyHead {
+    margin-top: 24px;
+    margin-bottom: 16px !important;
+}
+
+.currentFormat {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 .divider {
-  border: none;
-  border-top: 1px solid #444;
-  margin: 20px 0 40px;
+  border-top: 1px solid #fff;
+  margin: 10px 0 40px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 40px;
+}
+
+.bottomLeft {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
 .column ul {
@@ -73,15 +119,15 @@
 }
 
 .column li {
-  font-size: 0.9rem;
-  margin-bottom: 8px;
+  font-size: 1.125rem;
+  margin-bottom: 16px;
   cursor: pointer;
 }
 
 .socialIcons {
   display: flex;
   gap: 12px;
-  margin: 12px 0 20px;
+  margin: 12px 0 56px;
 }
 
 .payments {
@@ -90,17 +136,26 @@
   gap: 10px;
 }
 
+.paymentsHead {
+    margin-bottom: 16px !important;
+}
+
 .copyright {
   text-align: center;
   margin-top: 40px;
-  font-size: 0.75rem;
-  color: #999;
+  font-size: 14px;
+  color: #fff;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .top,
   .bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottomLeft {
     display: flex;
     flex-direction: column;
   }
