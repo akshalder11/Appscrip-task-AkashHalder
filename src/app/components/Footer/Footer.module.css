@@ -25,12 +25,16 @@
   margin-bottom: 24px;
 }
 
+.contact h3 {
+    margin-bottom: 0 !important;
+}
+
 .newsletter p,
 .contact p {
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 10px;
-  color: #FFF;
+  margin-bottom: 0;
+  color: #fff;
 }
 
 .currencyNote {
@@ -39,21 +43,22 @@
 }
 
 .newsletter h3 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .newsletter p {
-    margin-bottom: 3.125rem;
+  margin-bottom: 3.125rem;
 }
 
 .inputGroup {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 12px;
 }
 
 .inputGroup input {
-    font-family: 'Satoshi';
+  font-family: "Satoshi";
   font-size: 1.125rem !important;
   flex: 1;
   max-width: 22rem;
@@ -63,7 +68,7 @@
 }
 
 .inputGroup input:focus {
-    outline: none;
+  outline: none;
 }
 
 .inputGroup button {
@@ -77,27 +82,36 @@
   opacity: 30%;
 }
 
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+}
+
 .currency {
   display: flex;
   align-items: center;
   gap: 12px;
   font-size: 0.9rem;
-  margin: 8px 0;
+  margin: 16px 0;
 }
 
 .currencyHead {
-    margin-top: 24px;
-    margin-bottom: 16px !important;
+  margin-top: 24px;
+  margin-bottom: 16px !important;
 }
 
 .currentFormat {
-    font-size: 1rem;
-    font-weight: 700;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .divider {
   border-top: 1px solid #fff;
-  margin: 10px 0 40px;
+  margin: 26px 0 40px;
+}
+
+.divider2 {
+  display: none;
 }
 
 .bottom {
@@ -137,7 +151,7 @@
 }
 
 .paymentsHead {
-    margin-bottom: 16px !important;
+  margin-bottom: 16px !important;
 }
 
 .copyright {
@@ -172,5 +186,138 @@
   .socialIcons,
   .payments {
     justify-content: flex-start;
+  }
+}
+
+.bottomMobile {
+  display: none;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+
+.bottomMobile details {
+  border-bottom: 1px solid #fff;
+  padding: 24px 0;
+}
+
+.bottomMobile summary {
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.bottomMobile ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.bottomMobile li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 24px 16px;
+  }
+
+  .newsletter h3 {
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+
+  .newsletter p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 14px !important;
+  }
+
+  .inputGroup {
+    flex-direction: row;
+  }
+
+  .inputGroup input {
+    max-width: 226px;
+  }
+
+  .inputGroup button {
+    font-size: 1rem;
+    padding: 14px;
+    max-width: fit-content;
+  }
+
+  .top {
+    gap: 24px;
+  }
+
+  .divider2 {
+    display: block;
+    border-top: 1px solid #fff;
+    margin: 10px 0 0 0;
+  }
+
+  .contactDetails {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .contact h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 16px !important;
+  }
+
+  .contact p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+
+  .currency {
+    margin-bottom: 14px;
+  }
+
+  .currencyHead {
+    margin-top: 24px !important;
+  }
+
+  .currentFormat {
+    font-size: 14px;
+  }
+
+  .currencyNote {
+    display: none;
+  }
+
+  .divider {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .bottomLeft,
+  .bottomRight {
+    display: none;
+  }
+
+  .bottomMobile {
+    display: flex;
+  }
+
+  .socialIcons {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .payments {
+    gap: 8px;
+  }
+
+  .paymentSize {
+    width: 50px;
+    height: 30px;
   }
 }

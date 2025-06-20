@@ -16,10 +16,16 @@ export default function Footer() {
             </div>
           </div>
 
+        <hr className={styles.divider2} />
+
           <div className={styles.contact}>
-            <h3>CONTACT US</h3>
+            <h3>CALL US</h3>
+            <div className={styles.contactDetails}>
             <p>+44 221 133 5360</p>
             <p>customercare@mettamuse.com</p>
+            </div>
+
+        <hr className={styles.divider2} />
 
             <h3 className={styles.currencyHead}>CURRENCY</h3>
             <div className={styles.currency}>
@@ -27,8 +33,8 @@ export default function Footer() {
               <span className={styles.currentFormat}>USD</span>
             </div>
             <p className={styles.currencyNote}>
-              Transactions will be completed in Euros and a currency reference is
-              available on hover.
+              Transactions will be completed in Euros and a currency reference
+              is available on hover.
             </p>
           </div>
         </div>
@@ -67,18 +73,128 @@ export default function Footer() {
           <div className={styles.bottomRight}>
             <h4>FOLLOW US</h4>
             <div className={styles.socialIcons}>
-              <Image src="/icons/insta.svg" alt="Instagram" width={32} height={32} />
-              <Image src="/icons/linkedin.svg" alt="LinkedIn" width={32} height={32} />
+              <Image
+                src="/icons/insta.svg"
+                alt="Instagram"
+                width={32}
+                height={32}
+              />
+              <Image
+                src="/icons/linkedin.svg"
+                alt="LinkedIn"
+                width={32}
+                height={32}
+              />
             </div>
 
             <h4 className={styles.paymentsHead}>mettā muse ACCEPTS</h4>
             <div className={styles.payments}>
               <Image src="/icons/Gpay.svg" alt="GPay" width={56} height={35} />
-              <Image src="/icons/MasterCard.svg" alt="MasterCard" width={56} height={35} />
-              <Image src="/icons/PayPal.svg" alt="Paypal" width={56} height={35} />
+              <Image
+                src="/icons/MasterCard.svg"
+                alt="MasterCard"
+                width={56}
+                height={35}
+              />
+              <Image
+                src="/icons/PayPal.svg"
+                alt="Paypal"
+                width={56}
+                height={35}
+              />
               <Image src="/icons/Amex.svg" alt="Amex" width={56} height={35} />
-              <Image src="/icons/ApplePay.svg" alt="Apple Pay" width={56} height={35} />
-              <Image src="/icons/SomethingPay.svg" alt="Something Pay" width={56} height={35} />
+              <Image
+                src="/icons/ApplePay.svg"
+                alt="Apple Pay"
+                width={56}
+                height={35}
+              />
+              <Image
+                src="/icons/SomethingPay.svg"
+                alt="Something Pay"
+                width={56}
+                height={35}
+              />
+            </div>
+          </div>
+
+          {/* Mobile Accordion version */}
+          <div className={styles.bottomMobile}>
+            <details>
+              <summary>mettā muse</summary>
+              <ul>
+                <li>About Us</li>
+                <li>Stories</li>
+                <li>Artisans</li>
+                <li>Boutiques</li>
+                <li>Contact Us</li>
+                <li>EU Compliances Docs</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>QUICK LINKS</summary>
+              <ul>
+                <li>Orders & Shipping</li>
+                <li>Join/Login as a Seller</li>
+                <li>Payment & Pricing</li>
+                <li>Return & Refunds</li>
+                <li>FAQs</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+              </ul>
+            </details>
+
+            <details>
+              <summary>FOLLOW US</summary>
+              <div className={styles.socialIcons}>
+                <Image
+                  src="/icons/insta.svg"
+                  alt="Instagram"
+                  width={32}
+                  height={32}
+                />
+                <Image
+                  src="/icons/linkedin.svg"
+                  alt="LinkedIn"
+                  width={32}
+                  height={32}
+                />
+              </div>
+            </details>
+
+            <h4 className={styles.paymentsHead}>mettā muse ACCEPTS</h4>
+            <div className={styles.payments}>
+              <Image src="/icons/Gpay.svg" alt="GPay" width={56} height={35} className={styles.paymentSize}/>
+              <Image
+              className={styles.paymentSize}
+                src="/icons/MasterCard.svg"
+                alt="MasterCard"
+                width={56}
+                height={35}
+              />
+              <Image
+              className={styles.paymentSize}
+                src="/icons/PayPal.svg"
+                alt="Paypal"
+                width={56}
+                height={35}
+              />
+              <Image src="/icons/Amex.svg" alt="Amex" width={56} height={35} className={styles.paymentSize}/>
+              <Image
+              className={styles.paymentSize}
+                src="/icons/ApplePay.svg"
+                alt="Apple Pay"
+                width={56}
+                height={35}
+              />
+              <Image
+              className={styles.paymentSize}
+                src="/icons/SomethingPay.svg"
+                alt="Something Pay"
+                width={56}
+                height={35}
+              />
             </div>
           </div>
         </div>
