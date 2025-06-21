@@ -1,0 +1,50 @@
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  /* text-align: center; */
+  max-width: 300px;
+  max-height: 462px;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 400px;
+  background-color: #ddd;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  overflow: hidden; /* important to crop excess image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* scales and crops to fill without distortion */
+  display: block;
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  width: 250px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 400;
+  color: #888792;
+  margin: 0;
+}

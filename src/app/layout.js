@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import SubMenu from "./components/SubMenu/SubMenu";
+import { ProductProvider } from "./context/ProductContext";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,10 +13,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar/>
-        <SubMenu current="Home" active="Shop" />
-        {children}
-        <Footer/>
+        <ProductProvider>
+          <Navbar />
+          <SubMenu current="Home" active="Shop" />
+          {children}
+          <Footer />
+        </ProductProvider>
       </body>
     </html>
   );
