@@ -29,6 +29,7 @@
 .filterSection li {
   margin-bottom: 12px;
   font-size: 0.95rem;
+  text-transform: capitalize;
 }
 
 .productGrid {

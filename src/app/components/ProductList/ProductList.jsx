@@ -2,11 +2,15 @@
 
 import styles from "./ProductList.module.css";
 import ProductCard from "../ProductCard/ProductCard"; // assumes you’ve created this
-import { useEffect, useState } from "react";
 import { useProductContext } from "../../context/ProductContext";
 
 export default function ProductList() {
-  const { productDataList, setProductDataList, isFilterVisible } = useProductContext();
+  const {
+    productDataList,
+    setProductDataList,
+    isFilterVisible,
+    filterCategories,
+  } = useProductContext();
   const data = useProductContext();
 
   console.log("ContextObject", data);
@@ -19,15 +23,13 @@ export default function ProductList() {
           <aside className={styles.filterSection}>
             <h3>Filters</h3>
             <ul>
-              <li>
-                <input type="checkbox" /> Category A
-              </li>
-              <li>
-                <input type="checkbox" /> Category B
-              </li>
-              <li>
-                <input type="checkbox" /> Category C
-              </li>
+              {filterCategories?.map((category, index) => {
+                return (
+                  <li key={index}>
+                    <input type="checkbox" value={category} /> {category}
+                  </li>
+                );
+              })}
             </ul>
           </aside>
         )}
