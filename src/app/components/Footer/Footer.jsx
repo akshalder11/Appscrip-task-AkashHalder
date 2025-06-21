@@ -16,16 +16,16 @@ export default function Footer() {
             </div>
           </div>
 
-        <hr className={styles.divider2} />
+          <hr className={styles.divider2} />
 
           <div className={styles.contact}>
             <h3>CALL US</h3>
             <div className={styles.contactDetails}>
-            <p>+44 221 133 5360</p>
-            <p>customercare@mettamuse.com</p>
+              <p>+44 221 133 5360</p>
+              <p>customercare@mettamuse.com</p>
             </div>
 
-        <hr className={styles.divider2} />
+            <hr className={styles.divider2} />
 
             <h3 className={styles.currencyHead}>CURRENCY</h3>
             <div className={styles.currency}>
@@ -165,31 +165,43 @@ export default function Footer() {
 
             <h4 className={styles.paymentsHead}>mettā muse ACCEPTS</h4>
             <div className={styles.payments}>
-              <Image src="/icons/Gpay.svg" alt="GPay" width={56} height={35} className={styles.paymentSize}/>
               <Image
-              className={styles.paymentSize}
+                src="/icons/Gpay.svg"
+                alt="GPay"
+                width={56}
+                height={35}
+                className={styles.paymentSize}
+              />
+              <Image
+                className={styles.paymentSize}
                 src="/icons/MasterCard.svg"
                 alt="MasterCard"
                 width={56}
                 height={35}
               />
               <Image
-              className={styles.paymentSize}
+                className={styles.paymentSize}
                 src="/icons/PayPal.svg"
                 alt="Paypal"
                 width={56}
                 height={35}
               />
-              <Image src="/icons/Amex.svg" alt="Amex" width={56} height={35} className={styles.paymentSize}/>
               <Image
-              className={styles.paymentSize}
+                src="/icons/Amex.svg"
+                alt="Amex"
+                width={56}
+                height={35}
+                className={styles.paymentSize}
+              />
+              <Image
+                className={styles.paymentSize}
                 src="/icons/ApplePay.svg"
                 alt="Apple Pay"
                 width={56}
                 height={35}
               />
               <Image
-              className={styles.paymentSize}
+                className={styles.paymentSize}
                 src="/icons/SomethingPay.svg"
                 alt="Something Pay"
                 width={56}
