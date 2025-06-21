@@ -1,9 +1,7 @@
 .card {
   background-color: #fff;
   border-radius: 8px;
-  /* text-align: center; */
   max-width: 300px;
-  max-height: 462px;
 }
 
 .imagePlaceholder {
@@ -12,7 +10,7 @@
   background-color: #ddd;
   margin-bottom: 12px;
   border-radius: 4px;
-  overflow: hidden; /* important to crop excess image */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +19,7 @@
 .productImage {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* scales and crops to fill without distortion */
+  object-fit: cover;
   display: block;
 }
 
@@ -48,3 +46,38 @@
   color: #888792;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .card {
+    width: 166px;
+    height: 280px;
+  }
+
+  .imagePlaceholder {
+    height: 200px;
+  }
+
+  .productDetails {
+    align-items: flex-start;
+  }
+
+  .title {
+    font-size: 14px;
+    max-width: 140px;
+  }
+
+  .price {
+    font-size: 12px;
+  }
+
+  .productImage {
+    object-fit: cover;
+  }
+
+  .icon {
+    margin-top: 16px;
+    width: 16px;
+    height: 16px;
+  }
+}
+

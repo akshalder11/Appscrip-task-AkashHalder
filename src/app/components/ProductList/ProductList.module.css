@@ -38,3 +38,23 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 32px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .filterSection {
+    display: none;
+  }
+
+  .productListWrapper {
+    padding: 16px 0;
+  }
+
+  .productGrid {
+    justify-content: center;
+    grid-template-columns: repeat(2, 166px);
+    row-gap: 16px;
+  }
+}
