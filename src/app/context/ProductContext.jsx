@@ -5,8 +5,10 @@ const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
   const [productDataList, setProductDataList] = useState([]);
-  const [filterCategories, setFilterCategories] = useState([]);
   const [isFilterVisible, setIsFilterVisible] = useState(true);
+  const [filterCategories, setFilterCategories] = useState([]);
+  const [selectedFilters, setselectedFilters] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     const fetchProductData = async () => {
@@ -14,7 +16,7 @@ export const ProductProvider = ({ children }) => {
         const res = await fetch("https://fakestoreapi.com/products");
         const response = await res.json();
         setProductDataList(response);
-        const categorySet = new Set(response.map(item => item.category))
+        const categorySet = new Set(response.map((item) => item.category));
         setFilterCategories(Array.from(categorySet));
       } catch (error) {
         console.log("Error", error);
@@ -32,6 +34,10 @@ export const ProductProvider = ({ children }) => {
         setIsFilterVisible,
         filterCategories,
         setFilterCategories,
+        selectedFilters,
+        setselectedFilters,
+        filteredProducts,
+        setFilteredProducts,
       }}
     >
       {children}

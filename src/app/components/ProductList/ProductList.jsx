@@ -3,6 +3,7 @@
 import styles from "./ProductList.module.css";
 import ProductCard from "../ProductCard/ProductCard"; // assumes you’ve created this
 import { useProductContext } from "../../context/ProductContext";
+import { useEffect } from "react";
 
 export default function ProductList() {
   const {
@@ -10,8 +11,31 @@ export default function ProductList() {
     setProductDataList,
     isFilterVisible,
     filterCategories,
+    setFilterCategories,
+    selectedFilters,
+    setselectedFilters,
+    filteredProducts,
+    setFilteredProducts,
   } = useProductContext();
   const data = useProductContext();
+
+  useEffect(() => {
+    const filteredValue =
+      selectedFilters.length === 0
+        ? []
+        : productDataList.filter((product) =>
+            selectedFilters.includes(product.category)
+          );
+
+    setFilteredProducts(filteredValue);
+  }, [selectedFilters]);
+
+  const filterCheckBoxes = (e) => {
+    const { value, checked } = e.target;
+
+    if (checked) setselectedFilters((prev) => [...prev, value]);
+    else setselectedFilters((prev) => prev.filter((item) => item !== value));
+  };
 
   console.log("ContextObject", data);
 
@@ -26,7 +50,13 @@ export default function ProductList() {
               {filterCategories?.map((category, index) => {
                 return (
                   <li key={index}>
-                    <input type="checkbox" value={category} /> {category}
+                    <input
+                      type="checkbox"
+                      value={category}
+                      onChange={filterCheckBoxes}
+                      checked={selectedFilters.includes(category)}
+                    />{" "}
+                    {category}
                   </li>
                 );
               })}
@@ -36,7 +66,10 @@ export default function ProductList() {
 
         {/* Product grid */}
         <div className={styles.productGrid}>
-          {productDataList?.map((item) => (
+          {(filteredProducts?.length > 0
+            ? filteredProducts
+            : productDataList
+          )?.map((item) => (
             <ProductCard
               key={item.id}
               image={item.image}
