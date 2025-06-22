@@ -41,45 +41,49 @@ export default function ProductList() {
 
   return (
     <section className={styles.productListWrapper}>
-      { loading ? (<Loader/>) : (
-      <div className={styles.container}>
-        {/* Filter section */}
-        {isFilterVisible && (
-          <aside className={styles.filterSection}>
-            <h3>Filters</h3>
-            <ul>
-              {filterCategories?.map((category, index) => {
-                return (
-                  <li key={index}>
-                    <input
-                      type="checkbox"
-                      value={category}
-                      onChange={filterCheckBoxes}
-                      checked={selectedFilters.includes(category)}
-                    />{" "}
-                    {category}
-                  </li>
-                );
-              })}
-            </ul>
-          </aside>
-        )}
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className={styles.container}>
+          {/* Filter section */}
+          {isFilterVisible && (
+            <aside className={styles.filterSection}>
+              <h2>Filters</h2>
+              <ul>
+                {filterCategories?.map((category, index) => {
+                  return (
+                    <li key={index}>
+                      <label>
+                        <input
+                          type="checkbox"
+                          value={category}
+                          onChange={filterCheckBoxes}
+                          checked={selectedFilters.includes(category)}
+                        />
+                        {category}
+                      </label>
+                    </li>
+                  );
+                })}
+              </ul>
+            </aside>
+          )}
 
-        {/* Product grid */}
-        <div className={styles.productGrid}>
-          {(filteredProducts?.length > 0
-            ? filteredProducts
-            : productDataList
-          )?.map((item) => (
-            <ProductCard
-              key={item.id}
-              image={item.image}
-              title={item.title}
-              price={item.price}
-            />
-          ))}
+          {/* Product grid */}
+          <div className={styles.productGrid}>
+            {(filteredProducts?.length > 0
+              ? filteredProducts
+              : productDataList
+            )?.map((item) => (
+              <ProductCard
+                key={item.id}
+                image={item.image}
+                title={item.title}
+                price={item.price}
+              />
+            ))}
+          </div>
         </div>
-      </div>
       )}
     </section>
   );

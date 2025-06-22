@@ -44,7 +44,7 @@ export default function Navbar() {
         
         {/* Language dropdown only on large screens */}
         <div className={styles.languageDropdown}>
-             <p className={styles.languageText}>ENG</p>   {/* <Image src="/icons/language.svg" alt="Language" width={24} height={24} /> */}
+             <p className={styles.languageText}>ENG</p>  
         </div>
       </div>
     </header>

@@ -8,7 +8,7 @@
 }
 
 .filterSection {
-  flex: 0 0 240px; /* Fixed width for filter panel */
+  flex: 0 0 240px;
   background-color: #fff;
   padding: 24px 0;
   border-top: 1px solid #ddd;
@@ -16,7 +16,7 @@
   height: fit-content;
 }
 
-.filterSection h3 {
+.filterSection h2 {
   font-size: 18px;
   text-transform: uppercase;
   margin-top: 0;
@@ -33,6 +33,10 @@
   margin-bottom: 12px;
   font-size: 0.95rem;
   text-transform: capitalize;
+}
+
+.filterSection input {
+  margin-right: 8px;
 }
 
 .productGrid {

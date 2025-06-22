@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function ProductCard({ image, title, price }) {
   return (
-    <div className={styles.card}>
+    <article className={styles.card}>
       <div className={styles.imagePlaceholder}>
-        <img src={image} alt="Product" className={styles.productImage} />
+        <img src={image} alt={title} className={styles.productImage} />
       </div>
 
       <div className={styles.productDetails}>
         <div className="detailsText">
-          <h4 className={styles.title}>{title}</h4>
+          <p className={styles.title}>{title}</p>
           <p className={styles.price}>${price}</p>
         </div>
         <div className="favouriteIcon">
@@ -23,6 +23,6 @@ export default function ProductCard({ image, title, price }) {
           />
         </div>
       </div>
-    </div>
+    </article>
   );
 }
