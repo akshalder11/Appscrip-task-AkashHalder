@@ -29,7 +29,6 @@ export default function ProductHeader() {
           <button className={styles.filterButtonMobile}>Filter</button>
         </div>
 
-        {/* Vertical line visible only on mobile */}
         <div className={styles.mobileDivider}></div>
 
         <div className={styles.right}>
@@ -45,8 +44,12 @@ export default function ProductHeader() {
                 <li onClick={() => handleSort("recommended")}>Recommended</li>
                 <li onClick={() => handleSort("titleAZ")}>Newest First</li>
                 <li onClick={() => handleSort("titleZA")}>Popular</li>
-                <li onClick={() => handleSort("priceLowToHigh")}>Price: Low to High</li>
-                <li onClick={() => handleSort("priceHighToLow")}>Price: High to Low</li>
+                <li onClick={() => handleSort("priceLowToHigh")}>
+                  Price: Low to High
+                </li>
+                <li onClick={() => handleSort("priceHighToLow")}>
+                  Price: High to Low
+                </li>
               </ul>
             )}
           </div>

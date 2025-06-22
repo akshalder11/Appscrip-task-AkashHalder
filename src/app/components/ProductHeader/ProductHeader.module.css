@@ -27,7 +27,7 @@
 
 .filterButtonDesktop,
 .filterButtonMobile {
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
   color: #888792;
   background: none;
   border: none;
@@ -96,7 +96,6 @@
   color: #252020;
 }
 
-/* Mobile view */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;

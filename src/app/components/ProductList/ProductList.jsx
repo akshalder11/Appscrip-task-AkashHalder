@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./ProductList.module.css";
-import ProductCard from "../ProductCard/ProductCard"; // assumes you’ve created this
+import ProductCard from "../ProductCard/ProductCard";
 import { useProductContext } from "../../context/ProductContext";
 import { useEffect } from "react";
 import Loader from "../Loader/Loader";
@@ -45,7 +45,6 @@ export default function ProductList() {
         <Loader />
       ) : (
         <div className={styles.container}>
-          {/* Filter section */}
           {isFilterVisible && (
             <aside className={styles.filterSection}>
               <h2>Filters</h2>
@@ -69,7 +68,6 @@ export default function ProductList() {
             </aside>
           )}
 
-          {/* Product grid */}
           <div className={styles.productGrid}>
             {(filteredProducts?.length > 0
               ? filteredProducts

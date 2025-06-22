@@ -6,7 +6,8 @@ import { ProductProvider } from "./context/ProductContext";
 
 export const metadata = {
   title: "Online Store for Fashion, Jewelry & Electronics | metta muse",
-  description: "Discover stylish fashion, elegant jewelry, and the latest electronics — all in one place at metta muse. Curated collections from global artisans and top brands.",
+  description:
+    "Discover stylish fashion, elegant jewelry, and the latest electronics — all in one place at metta muse. Curated collections from global artisans and top brands.",
   viewport: "width=device-width, initial-scale=1",
   keywords: [
     "online shopping",
@@ -18,10 +19,9 @@ export const metadata = {
     "smart gadgets",
     "metta muse shop",
     "affordable fashion",
-    "trendy accessories"
+    "trendy accessories",
   ].join(", "),
 };
-
 
 export default function RootLayout({ children }) {
   return (

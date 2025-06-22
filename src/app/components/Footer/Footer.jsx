@@ -5,7 +5,6 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* Top Section */}
         <div className={styles.top}>
           <div className={styles.newsletter}>
             <h3>BE THE FIRST TO KNOW</h3>
@@ -41,7 +40,6 @@ export default function Footer() {
 
         <hr className={styles.divider} />
 
-        {/* Bottom Section */}
         <div className={styles.bottom}>
           <div className={styles.bottomLeft}>
             <div className={styles.column}>
@@ -118,7 +116,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Mobile Accordion version */}
           <div className={styles.bottomMobile}>
             <details>
               <summary>mettā muse</summary>

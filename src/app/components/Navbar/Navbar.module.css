@@ -36,7 +36,6 @@
   font-weight: 900;
 }
 
-/* Hide hamburger menu by default */
 .hamburger {
   display: none;
   background: none;
@@ -49,11 +48,11 @@
   align-items: center;
   justify-content: center;
 
-  line-height: 0; 
-  vertical-align: middle; 
+  line-height: 0;
+  vertical-align: middle;
 }
 
-/* Language dropdown hidden on smaller screens */
+
 .languageDropdown,
 .profileIcon {
   display: block;
@@ -66,7 +65,7 @@
   object-fit: contain;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
   .navbar {
     padding: 16px;
@@ -100,7 +99,6 @@
   }
 }
 
-/* Force next/image span wrapper to behave */
 .icon :global(span) {
   display: flex !important;
   align-items: center;

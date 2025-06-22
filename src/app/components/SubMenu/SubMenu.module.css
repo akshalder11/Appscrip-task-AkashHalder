@@ -6,7 +6,6 @@
   text-transform: uppercase;
 }
 
-/* Desktop menu */
 .desktopMenu {
   display: flex;
   justify-content: center;
@@ -40,31 +39,6 @@
   animation: growLine 0.4s forwards;
 }
 
-/* Keyframes for growing line */
-@keyframes growLine {
-  from {
-    width: 0;
-    opacity: 0;
-  }
-  to {
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-/* Keyframes for shrinking line */
-@keyframes shrinkLine {
-  from {
-    width: 100%;
-    opacity: 1;
-  }
-  to {
-    width: 0;
-    opacity: 0;
-  }
-}
-
-/* Mobile menu (hidden by default) */
 .mobileMenu {
   display: none;
   padding: 0 5%;
@@ -81,7 +55,28 @@
   color: #bfc8cd;
 }
 
-/* Responsive toggle */
+@keyframes growLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes shrinkLine {
+  from {
+    width: 100%;
+    opacity: 1;
+  }
+  to {
+    width: 0;
+    opacity: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .submenu {
     border-bottom: none;
