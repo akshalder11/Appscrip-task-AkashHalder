@@ -42,6 +42,7 @@ export default function ProductList() {
   return (
     <section className={styles.productListWrapper}>
       <div className={styles.container}>
+      
         {/* Filter section */}
         {isFilterVisible && (
           <aside className={styles.filterSection}>
