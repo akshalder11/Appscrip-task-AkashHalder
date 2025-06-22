@@ -111,7 +111,7 @@
 }
 
 body {
-  font-family: 'Satoshi';
+  font-family: 'Satoshi', sans-serif;
   font-weight: 300;
   color: #252020;
   margin: 0;

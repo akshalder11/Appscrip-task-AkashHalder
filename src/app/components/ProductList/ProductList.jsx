@@ -4,18 +4,18 @@ import styles from "./ProductList.module.css";
 import ProductCard from "../ProductCard/ProductCard"; // assumes you’ve created this
 import { useProductContext } from "../../context/ProductContext";
 import { useEffect } from "react";
+import Loader from "../Loader/Loader";
 
 export default function ProductList() {
   const {
     productDataList,
-    setProductDataList,
     isFilterVisible,
     filterCategories,
-    setFilterCategories,
     selectedFilters,
     setselectedFilters,
     filteredProducts,
     setFilteredProducts,
+    loading,
   } = useProductContext();
   const data = useProductContext();
 
@@ -41,8 +41,8 @@ export default function ProductList() {
 
   return (
     <section className={styles.productListWrapper}>
+      { loading ? (<Loader/>) : (
       <div className={styles.container}>
-      
         {/* Filter section */}
         {isFilterVisible && (
           <aside className={styles.filterSection}>
@@ -80,6 +80,7 @@ export default function ProductList() {
           ))}
         </div>
       </div>
+      )}
     </section>
   );
 }

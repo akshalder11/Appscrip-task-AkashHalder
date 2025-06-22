@@ -58,7 +58,7 @@
 }
 
 .inputGroup input {
-  font-family: "Satoshi";
+  font-family: 'Satoshi', sans-serif;
   font-size: 1.125rem !important;
   flex: 1;
   max-width: 22rem;

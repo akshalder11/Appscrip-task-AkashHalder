@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <HeadSection />
-      <ProductHeader totalItems={34}/>
+      <ProductHeader />
       <ProductList/>
     </>
   );

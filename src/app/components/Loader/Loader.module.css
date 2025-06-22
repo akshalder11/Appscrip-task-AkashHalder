@@ -1,0 +1,30 @@
+.loaderWrapper {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  gap: 12px;
+  color: #888792;
+}
+
+.loaderWrapper p {
+  font-weight: 400;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #888792 0%, transparent 100%);
+  -webkit-mask: radial-gradient(farthest-side, transparent 75%, black 76%);
+  mask: radial-gradient(farthest-side, transparent 75%, black 76%);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

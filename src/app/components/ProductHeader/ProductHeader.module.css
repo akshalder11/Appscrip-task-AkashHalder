@@ -27,7 +27,7 @@
 
 .filterButtonDesktop,
 .filterButtonMobile {
-  font-family: "Satoshi";
+  font-family: 'Satoshi', sans-serif;
   color: #888792;
   background: none;
   border: none;
